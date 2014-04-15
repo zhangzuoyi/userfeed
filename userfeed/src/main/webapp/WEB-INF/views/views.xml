@@ -1,0 +1,23 @@
+<!DOCTYPE tiles-definitions PUBLIC
+      "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+      "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+  
+<tiles-definitions>
+   <definition name="home-template" template="/WEB-INF/views/layouts/main-template.jsp">
+   	  <put-list-attribute name="items">
+	    <add-attribute value="/WEB-INF/views/tiles/defaultJs.jsp" />
+	  </put-list-attribute>
+   </definition>
+   <definition name="simple-template" template="/WEB-INF/views/layouts/simple-template.jsp">
+   	  <put-list-attribute name="items">
+	    <add-attribute value="/WEB-INF/views/tiles/defaultJs.jsp" />
+	  </put-list-attribute>
+   </definition>
+
+   <definition name="index" extends="home-template">
+     <put-attribute name="content" value="/WEB-INF/views/index.jsp" />
+   </definition>
+   <definition name="login" extends="home-template">
+     <put-attribute name="content" value="/WEB-INF/views/login.jsp" />
+   </definition>    
+</tiles-definitions>
